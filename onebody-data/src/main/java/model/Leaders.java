@@ -1,4 +1,4 @@
-package com.onebody.churchoperations.model;
+package model;
 
 public class Leaders extends Members {
     private Position position;

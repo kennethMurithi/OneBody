@@ -1,4 +1,4 @@
-package com.onebody.churchoperations.model;
+package model;
 
 public class Position {
     private String type;

@@ -6,11 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="OneBody" />
+        <module name="onebody-data" />
+        <module name="onebody-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="OneBody" target="1.8" />
+      <module name="onebody-data" target="1.8" />
+      <module name="onebody-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

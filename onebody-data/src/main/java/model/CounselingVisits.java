@@ -1,4 +1,4 @@
-package com.onebody.churchoperations.model;
+package model;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package com.onebody.churchoperations.model;
+package model;
 
 import java.time.LocalDate;
 
@@ -8,7 +8,7 @@ public class Events {
     private String venue;
     private String comments;
     private String speakerNames;
-    pr
+    private Leaders leader;
 
     public String getEventName() {
         return eventName;
@@ -48,5 +48,13 @@ public class Events {
 
     public void setSpeakerNames(String speakerNames) {
         this.speakerNames = speakerNames;
+    }
+
+    public Leaders getLeader() {
+        return leader;
+    }
+
+    public void setLeader(Leaders leader) {
+        this.leader = leader;
     }
 }

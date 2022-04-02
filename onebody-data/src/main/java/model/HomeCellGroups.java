@@ -1,4 +1,4 @@
-package com.onebody.churchoperations.model;
+package model;
 
 import java.time.LocalDate;
 import java.util.Set;
