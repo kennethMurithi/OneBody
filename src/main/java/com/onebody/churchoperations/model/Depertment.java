@@ -1,9 +1,12 @@
 package com.onebody.churchoperations.model;
 
+import java.util.Set;
+
 public class Depertment {
     private Members members;
     private Position position;
     private String duties;
+    private Set<Events> events;
 
     public Members getMembers() {
         return members;
