@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OneBody.iml" filepath="$PROJECT_DIR$/OneBody.iml" />
+      <module fileurl="file://$PROJECT_DIR$/church-operations.iml" filepath="$PROJECT_DIR$/church-operations.iml" />
       <module fileurl="file://$PROJECT_DIR$/onebody-data/onebody-data.iml" filepath="$PROJECT_DIR$/onebody-data/onebody-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/onebody-web/onebody-web.iml" filepath="$PROJECT_DIR$/onebody-web/onebody-web.iml" />
     </modules>
