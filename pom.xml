@@ -18,7 +18,7 @@
 
     <groupId>com.onebody</groupId>
     <artifactId>church-operations</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>church-operations</name>
     <description>Church Operations Project</description>
 
@@ -54,7 +54,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:kennethMurithi/OneBody.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>church-operations-0.0.1</tag>
   </scm>
 
 </project>
