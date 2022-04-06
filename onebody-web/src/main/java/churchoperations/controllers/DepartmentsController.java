@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DepartmentsController {
 
-    @RequestMapping({"departments/","departments/index","departments/index.html"})
+    @RequestMapping({"/departments","/departments/index","/departments/index.html"})
     public String listDepartments(){
 
         return "departments/index";
