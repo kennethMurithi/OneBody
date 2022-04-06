@@ -2,15 +2,8 @@ package service;
 
 import model.HomeCellGroups;
 
-import java.util.Set;
-
-public interface HomeCellService {
+public interface HomeCellService extends CrudService<HomeCellGroups, Long> {
 
     HomeCellGroups findByName(String name);
 
-    HomeCellGroups findById(Long id);
-
-    HomeCellGroups save(HomeCellGroups homeCellGroups);
-
-    Set<HomeCellGroups> findAll();
 }

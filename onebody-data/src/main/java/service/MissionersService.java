@@ -2,14 +2,7 @@ package service;
 
 import model.Missioners;
 
-import java.util.Set;
+public interface MissionersService extends CrudService<Missioners, Long> {
 
-public interface MissionersService {
-
-    Missioners findById(Long id);
-
-    Missioners save(Missioners missioners);
-
-    Set<Missioners> findAll();
 
 }

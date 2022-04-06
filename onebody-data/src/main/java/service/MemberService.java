@@ -2,16 +2,8 @@ package service;
 
 import model.Members;
 
-import java.util.Set;
-
-public interface MemberService {
+public interface MemberService extends CrudService<Members, Long> {
 
     Members findByLastName(String lastName);
-
-    Members findById(Long id);
-
-    Members save(Members members);
-
-    Set<Members> findAll();
 
 }
