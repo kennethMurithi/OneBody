@@ -7,7 +7,7 @@ public class PastoralVisit {
     private LocalDate date;
     private String location;
     private String comments;
-    private Set<Members> members;
+    private Set<Member> members;
     private Set<Leaders> leaders;
 
     public LocalDate getDate() {
@@ -34,11 +34,11 @@ public class PastoralVisit {
         this.comments = comments;
     }
 
-    public Set<Members> getMembers() {
+    public Set<Member> getMembers() {
         return members;
     }
 
-    public void setMembers(Set<Members> members) {
+    public void setMembers(Set<Member> members) {
         this.members = members;
     }
 

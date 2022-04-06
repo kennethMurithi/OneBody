@@ -2,18 +2,18 @@ package model;
 
 import java.util.Set;
 
-public class Depertment {
-    private Members members;
+public class Depertment extends BaseEntity {
+    private Member member;
     private Position position;
     private String duties;
     private Set<Events> events;
 
-    public Members getMembers() {
-        return members;
+    public Member getMember() {
+        return member;
     }
 
-    public void setMembers(Members members) {
-        this.members = members;
+    public void setMember(Member member) {
+        this.member = member;
     }
 
     public Position getPosition() {

@@ -1,6 +1,6 @@
 package model;
 
-public class Position {
+public class Position extends BaseEntity{
     private String type;
 
     public String getType() {

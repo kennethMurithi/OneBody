@@ -3,7 +3,7 @@ package model;
 import java.util.Set;
 
 public class CounselingVisits{
-    private Members member;
+    private Member member;
     private String date;
     private String description;
     private Set<Counselors> counselors;
@@ -24,11 +24,11 @@ public class CounselingVisits{
         this.description = description;
     }
 
-    public Members getMember() {
+    public Member getMember() {
         return member;
     }
 
-    public void setMember(Members member) {
+    public void setMember(Member member) {
         this.member = member;
     }
 

@@ -3,13 +3,13 @@ package model;
 import java.time.LocalDate;
 import java.util.Set;
 
-public class HomeCellGroups {
+public class HomeCellGroups extends BaseEntity{
     private String cellName;
     private Leaders cellLeader;
     private LocalDate meetDate;
     private String comments;
     private Set<PastoralVisit> pastoralVisits;
-    private Set<Members> cellMembers;
+    private Set<Member> cellMembers;
 
     public String getCellName() {
         return cellName;
@@ -51,11 +51,11 @@ public class HomeCellGroups {
         this.pastoralVisits = pastoralVisits;
     }
 
-    public Set<Members> getCellMembers() {
+    public Set<Member> getCellMembers() {
         return cellMembers;
     }
 
-    public void setCellMembers(Set<Members> cellMembers) {
+    public void setCellMembers(Set<Member> cellMembers) {
         this.cellMembers = cellMembers;
     }
 }

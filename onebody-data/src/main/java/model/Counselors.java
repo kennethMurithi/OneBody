@@ -1,4 +1,4 @@
 package model;
 
-public class Counselors extends Members {
+public class Counselors extends Member {
 }

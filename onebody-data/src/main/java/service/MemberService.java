@@ -1,9 +1,9 @@
 package service;
 
-import model.Members;
+import model.Member;
 
-public interface MemberService extends CrudService<Members, Long> {
+public interface MemberService extends CrudService<Member, Long> {
 
-    Members findByLastName(String lastName);
+    Member findByLastName(String lastName);
 
 }

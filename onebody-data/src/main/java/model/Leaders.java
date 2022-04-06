@@ -1,6 +1,6 @@
 package model;
 
-public class Leaders extends Members {
+public class Leaders extends Member {
     private Position position;
 
     public Position getPosition() {
