@@ -3,9 +3,9 @@ package model;
 import java.util.Set;
 
 public class CounselingVisits{
+    private Members member;
     private String date;
     private String description;
-    private Members member;
     private Set<Counselors> counselors;
 
     public String getDate() {

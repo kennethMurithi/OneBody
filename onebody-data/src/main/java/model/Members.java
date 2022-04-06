@@ -2,7 +2,7 @@ package model;
 
 import java.util.Set;
 
-public class Members {
+public class Members extends BaseEntity {
     private String firstName;
     private String secondName;
     private String lastName;
