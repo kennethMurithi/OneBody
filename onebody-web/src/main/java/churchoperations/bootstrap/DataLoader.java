@@ -26,7 +26,6 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Member member1 = new Member();
-        member1.setId(1L);
         member1.setFirstName("Kenneth");
         member1.setLastName("Mark");
         member1.setAddress("Nairobi");
@@ -35,7 +34,6 @@ public class DataLoader implements CommandLineRunner {
         memberService.save(member1);
 
         Member member2 = new Member();
-        member2.setId(2L);
         member2.setFirstName("Evelyn");
         member2.setLastName("Loise");
         member2.setAddress("Mombasa");
@@ -46,14 +44,12 @@ public class DataLoader implements CommandLineRunner {
         System.out.println("Loaded Members......");
 
         HomeCellGroups homeCellGroups1 = new HomeCellGroups();
-        homeCellGroups1.setId(1L);
         homeCellGroups1.setCellName("Nairobi East");
         homeCellGroups1.setComments("First Meet was Great");
 
         homeCellService.save(homeCellGroups1);
 
         HomeCellGroups homeCellGroups2 = new HomeCellGroups();
-        homeCellGroups2.setId(2L);
         homeCellGroups2.setCellName("Nairobi West");
         homeCellGroups2.setComments("We Held our Meeting Successfully");
 

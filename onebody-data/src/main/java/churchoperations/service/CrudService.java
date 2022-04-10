@@ -1,4 +1,4 @@
-package service;
+package churchoperations.service;
 
 import java.util.Set;
 

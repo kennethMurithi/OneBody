@@ -1,4 +1,4 @@
-package model;
+package churchoperations.model;
 
 import java.io.Serializable;
 

@@ -5,6 +5,24 @@
     <title>List of HomeCellGroups</title>
 </head>
 <body>
+<!--/*@thymesVar id="homecellgroup" type="churchoperations.model.HomeCellGroups"*/-->
     <h1 th:text="'List of all HomeCellGroups'">List of HomeCellGroups</h1>
+
+    <table >
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Cell Name</th>
+            <th>Comments</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="homecellgroup : ${homecellgroups}">
+            <td th:text="${homecellgroup.id}">1</td>
+            <td th:text="${homecellgroup.cellName}">Kasarani Revivals</td>
+            <td th:text="${homecellgroup.comments}">New Beginnings</td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
