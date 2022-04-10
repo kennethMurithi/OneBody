@@ -1,13 +1,11 @@
 package churchoperations.bootstrap;
 
-import model.HomeCellGroups;
-import model.Member;
+import churchoperations.model.HomeCellGroups;
+import churchoperations.model.Member;
+import churchoperations.service.HomeCellService;
+import churchoperations.service.MemberService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import service.HomeCellService;
-import service.MemberService;
-import service.map.HomeCellGroupsMap;
-import service.map.MemberServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -20,14 +18,9 @@ public class DataLoader implements CommandLineRunner {
 //    private final MissionersService missionersService;
 //    private final PositionService positionService;
 
-    public DataLoader() {
-        memberService = new MemberServiceMap();
-//        departmentService = new DepartmentServiceMap();
-        homeCellService = new HomeCellGroupsMap();
-//        counselorsService = new CounselorsServiceMap();
-//        leaderService = new LeadersServiceMap();
-//        missionersService = new MissionersServiceMap();
-//        positionService = new PositionServiceMap();
+    public DataLoader(MemberService memberService, HomeCellService homeCellService) {
+        this.memberService = memberService;
+        this.homeCellService = homeCellService;
     }
 
     @Override
