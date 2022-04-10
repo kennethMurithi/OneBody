@@ -1,11 +1,15 @@
 package service.map;
 
 import model.Member;
-import service.CrudService;
+import service.MemberService;
 
 import java.util.Set;
 
-public class MemberServiceMap extends AbstractMapService<Member, Long> implements CrudService<Member, Long> {
+public class MemberServiceMap extends AbstractMapService<Member, Long> implements MemberService {
+    @Override
+    public Member findByLastName(String lastName) {
+        return null;
+    }
 
     @Override
     public Set<Member> findAll() {

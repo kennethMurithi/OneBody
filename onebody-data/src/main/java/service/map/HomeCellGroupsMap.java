@@ -1,11 +1,16 @@
 package service.map;
 
 import model.HomeCellGroups;
-import service.CrudService;
+import service.HomeCellService;
 
 import java.util.Set;
 
-public class HomeCellGroupsMap extends AbstractMapService<HomeCellGroups, Long> implements CrudService<HomeCellGroups, Long> {
+public class HomeCellGroupsMap extends AbstractMapService<HomeCellGroups, Long> implements HomeCellService {
+
+    @Override
+    public HomeCellGroups findByName(String name) {
+        return null;
+    }
 
     @Override
     public Set<HomeCellGroups> findAll() {

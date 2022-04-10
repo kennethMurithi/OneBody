@@ -1,11 +1,11 @@
 package service.map;
 
 import model.Leaders;
-import service.CrudService;
+import service.LeaderService;
 
 import java.util.Set;
 
-public class LeadersServiceMap extends AbstractMapService<Leaders, Long> implements CrudService<Leaders, Long> {
+public class LeadersServiceMap extends AbstractMapService<Leaders, Long> implements LeaderService {
 
     @Override
     public Set<Leaders> findAll() {

@@ -1,11 +1,11 @@
 package service.map;
 
 import model.Position;
-import service.CrudService;
+import service.PositionService;
 
 import java.util.Set;
 
-public class PositionServiceMap extends AbstractMapService<Position, Long> implements CrudService<Position, Long> {
+public class PositionServiceMap extends AbstractMapService<Position, Long> implements PositionService {
 
     @Override
     public Set<Position> findAll() {
