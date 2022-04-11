@@ -8,16 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" th:href="@{/resources/images/favicon.png}">
+    <!--<link rel="shortcut icon" type="image/x-icon" th:href="@{/resources/images/chrisco-upper-room-logo.png}">-->
 
-    <title>PetClinic :: a Spring Framework demonstration</title>
+    <title>OneBody :: a Church Operations Project</title>
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" th:href="@{/resources/css/petclinic.css}"/>
+    <link rel="stylesheet" th:href="@{/resources/css/onebody.css}"/>
 
   </head>
 
@@ -49,20 +49,40 @@
                       <span>Home</span>
                   </li>
   
-                  <li th:replace="::menuItem ('/owners/find','owners','find owners','search','Find owners')">
+                  <li th:replace="::menuItem ('/members','members','find member','search','Find member')">
                       <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                       <span>Find owners</span>
                   </li>
   
-                  <li th:replace="::menuItem ('/vets.html','vets','veterinarians','th-list','Veterinarians')">
+                  <li th:replace="::menuItem ('/counselors','vets','counselors','th-list','counselors')">
                       <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
                       <span>Veterinarians</span>
                   </li>
-  
-                  <li th:replace="::menuItem ('/oups','error','trigger a RuntimeException to see how it is handled','warning-sign','Error')">
-                      <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-                      <span>Error</span>
+
+                  <li th:replace="::menuItem ('/leaders','leaders','leaders','th-list','leaders')">
+                      <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                      <span>Veterinarians</span>
                   </li>
+
+                  <li th:replace="::menuItem ('/homecellgroups','homegroups','homegroups','th-list','homegroups')">
+                      <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                      <span>Veterinarians</span>
+                  </li>
+
+                  <li th:replace="::menuItem ('/missioners','missioners','missioners','th-list','missioners')">
+                      <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                      <span>Veterinarians</span>
+                  </li>
+
+                  <!--<li th:replace="::menuItem ('/vets.html','vets','veterinarians','th-list','Veterinarians')">-->
+                      <!--<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>-->
+                      <!--<span>Veterinarians</span>-->
+                  <!--</li>-->
+  
+                  <!--<li th:replace="::menuItem ('/oups','error','trigger a RuntimeException to see how it is handled','warning-sign','Error')">-->
+                      <!--<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>-->
+                      <!--<span>Error</span>-->
+                  <!--</li>-->
   
               </ul>
           </div>
@@ -78,7 +98,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">
-              <img src="../static/resources/images/spring-pivotal-logo.png" th:src="@{/resources/images/spring-pivotal-logo.png}"
+              <img src="../static/resources/images/chrisco-upper-room-logo.png" th:src="@{/resources/images/chrisco-upper-room-logo.png}"
                 alt="Sponsored by Pivotal"/></div>
           </div>
         </div>
