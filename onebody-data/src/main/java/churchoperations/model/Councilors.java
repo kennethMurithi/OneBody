@@ -4,6 +4,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -11,7 +12,7 @@ import java.util.Set;
 public class Councilors extends Member {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "councilor")
-    private Set<CouncilorVisits> requestedvisits;
+    private Set<CouncilorVisits> requestedvisits = new HashSet<>();
 
     public Set<CouncilorVisits> getRequestedvisits() {
         return requestedvisits;

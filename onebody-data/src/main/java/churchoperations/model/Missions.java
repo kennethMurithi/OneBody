@@ -4,11 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "Missions")
-public class Missions {
+public class Missions extends BaseEntity {
 
     @Column(name = "date")
     private String date;
@@ -20,7 +21,7 @@ public class Missions {
     private String period;
 
     @OneToMany
-    private Set<Missioners> missioners;
+    private Set<Missioners> missioners = new HashSet<>();
 
     public String getDate() {
         return date;

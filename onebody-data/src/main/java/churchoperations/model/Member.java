@@ -1,6 +1,7 @@
 package churchoperations.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -30,10 +31,13 @@ public class Member extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "position_id")
-    private Set<Position> position;
+    private Set<Position> position = new HashSet<>();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "Departments")
-    private Set<churchoperations.model.Departments> departments;
+    private Set<Departments> departments = new HashSet<>();
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "member")
+    private Set<CouncilorVisits> councilorVisits = new HashSet<>();
 
     public String getFirstName() {
         return firstName;

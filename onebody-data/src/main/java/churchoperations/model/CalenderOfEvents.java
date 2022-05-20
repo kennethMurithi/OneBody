@@ -2,6 +2,8 @@ package churchoperations.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "CalenderOfEvents")
@@ -23,7 +25,7 @@ public class CalenderOfEvents {
     private String speakerNames;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "leader_id")
-    private Leaders leader;
+    private Set<Leaders> leader = new HashSet<>();
 
     public String getEventName() {
         return eventName;
@@ -65,11 +67,11 @@ public class CalenderOfEvents {
         this.speakerNames = speakerNames;
     }
 
-    public Leaders getLeader() {
+    public Set<Leaders> getLeader() {
         return leader;
     }
 
-    public void setLeader(Leaders leader) {
+    public void setLeader(Set<Leaders> leader) {
         this.leader = leader;
     }
 }

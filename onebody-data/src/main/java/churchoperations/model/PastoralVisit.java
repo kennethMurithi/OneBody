@@ -5,11 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "PastoralVisits")
-public class PastoralVisit {
+public class PastoralVisit extends BaseEntity {
 
     @Column(name = "date")
     private LocalDate date;
@@ -21,10 +22,10 @@ public class PastoralVisit {
     private String comments;
 
     @OneToMany
-    private Set<Member> members;
+    private Set<Member> members = new HashSet<>();
 
     @OneToMany
-    private Set<Leaders> leaders;
+    private Set<Leaders> leaders = new HashSet<>();
 
     public LocalDate getDate() {
         return date;

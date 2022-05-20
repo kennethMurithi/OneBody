@@ -2,6 +2,7 @@ package churchoperations.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -21,13 +22,13 @@ public class HomeCellGroups extends BaseEntity{
     private String comments;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pastoralvisit_id")
-    private Set<PastoralVisit> pastoralVisits;
+    private Set<PastoralVisit> pastoralVisits = new HashSet<>();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "member_id")
-    private Set<Member> cellMembers;
+    private Set<Member> cellMembers = new HashSet<>();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "visitors_id")
-    private Set<Visitors> visitor;
+    private Set<Visitors> visitor = new HashSet<>();
 
     public String getCellName() {
         return cellName;
