@@ -28,16 +28,20 @@ public class DataLoader implements CommandLineRunner {
         Member member1 = new Member();
         member1.setFirstName("Kenneth");
         member1.setLastName("Mark");
-        member1.setAddress("Nairobi");
+        member1.setAddress("222-K-North");
+        member1.setCity("Nairobi");
         member1.setTelephone("09873-8276");
+        member1.setEmail("Kenneth@gmail.com");
 
         memberService.save(member1);
 
         Member member2 = new Member();
         member2.setFirstName("Evelyn");
         member2.setLastName("Loise");
-        member2.setAddress("Mombasa");
-        member2.setTelephone("0983-0076");
+        member2.setAddress("987-P-South");
+        member2.setCity("Mombasa");
+        member2.setTelephone("094-555-555");
+        member2.setEmail("Loise@gmail.com");
 
         memberService.save(member2);
 

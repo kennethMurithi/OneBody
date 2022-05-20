@@ -1,11 +1,25 @@
 package churchoperations.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.Set;
 
+@Entity
+@Table(name = "Missions")
 public class Missions {
+
+    @Column(name = "date")
     private String date;
+
+    @Column(name = "venue")
     private String venue;
+
+    @Column(name = "period")
     private String period;
+
+    @OneToMany
     private Set<Missioners> missioners;
 
     public String getDate() {

@@ -1,7 +1,7 @@
 package churchoperations.service;
 
-import churchoperations.model.Counselors;
+import churchoperations.model.Councilors;
 
-public interface CounselorsService extends CrudService<Counselors, Long> {
+public interface CounselorsService extends CrudService<Councilors, Long> {
 
 }

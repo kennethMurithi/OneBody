@@ -19,7 +19,7 @@
     <groupId>com.onebody</groupId>
     <artifactId>church-operations</artifactId>
     <version>0.0.1</version>
-    <name>church-operations</name>
+    <title>church-operations</title>
     <description>Church Operations Project</description>
 
     <properties>

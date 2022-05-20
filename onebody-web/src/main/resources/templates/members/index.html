@@ -9,14 +9,16 @@
 
     <h1 th:text="'List Members'"> List all Members</h1>
 
-    <table >
+    <table class="table table-striped">
         <thead>
         <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Address</th>
-            <th>Telephone</th>
+            <th style="width: 20px;">Id</th>
+            <th style="width: 90px;">First Name</th>
+            <th style="width: 90px;">Last Name</th>
+            <th style="width: 90px;">Address</th>
+            <th style="width: 90px;">City</th>
+            <th style="width: 90px;">Telephone</th>
+            <th style="width: 90px;">email</th>
         </tr>
         </thead>
         <tbody>
@@ -24,8 +26,10 @@
             <td th:text="${member.id}">1</td>
             <td th:text="${member.firstName}">Ken</td>
             <td th:text="${member.lastName}">Murithi</td>
-            <td th:text="${member.address}">Mangu</td>
+            <td th:text="${member.address}">455BMangu</td>
+            <td th:text="${member.city}">Nairobi</td>
             <td th:text="${member.telephone}">9977-4455</td>
+            <td th:text="${member.email}">ken@gmail.com</td>
         </tr>
         </tbody>
     </table>

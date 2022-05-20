@@ -1,7 +1,7 @@
 package churchoperations.service;
 
-import churchoperations.model.Depertment;
+import churchoperations.model.Departments;
 
-public interface DepartmentService extends CrudService<Depertment, Long> {
+public interface DepartmentService extends CrudService<Departments, Long> {
 
 }

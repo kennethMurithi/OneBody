@@ -1,11 +1,12 @@
 package churchoperations.model;
 
-import javax.persistence.*;
-import java.util.Set;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
-@Table(name = "Members")
-public class Member extends BaseEntity {
+@Table(name = "Visitors")
+public class Visitors {
 
     @Column(name = "first_name")
     private String firstName;
@@ -27,13 +28,6 @@ public class Member extends BaseEntity {
 
     @Column(name = "email")
     private String email;
-
-    @ManyToOne
-    @JoinColumn(name = "position_id")
-    private Set<Position> position;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Departments")
-    private Set<churchoperations.model.Departments> departments;
 
     public String getFirstName() {
         return firstName;
@@ -89,13 +83,5 @@ public class Member extends BaseEntity {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Set<churchoperations.model.Departments> getDepartments() {
-        return departments;
-    }
-
-    public void setDepartments(Set<churchoperations.model.Departments> departments) {
-        this.departments = departments;
     }
 }

@@ -1,13 +1,28 @@
 package churchoperations.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
-public class Events {
+@Entity
+@Table(name = "CalenderOfEvents")
+public class CalenderOfEvents {
+
+    @Column(name = "event_name")
     private String eventName;
+
+    @Column(name = "date")
     private LocalDate date;
+
+    @Column(name = "venue")
     private String venue;
+
+    @Column(name = "comments")
     private String comments;
+
+    @Column(name = "speakerNames")
     private String speakerNames;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "leader_id")
     private Leaders leader;
 
     public String getEventName() {

@@ -1,13 +1,22 @@
 package churchoperations.model;
 
-public class Leaders extends Member {
-    private Position position;
 
-    public Position getPosition() {
-        return position;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Leaders")
+public class Leaders extends Member {
+
+    @Column(name = "YearsOfService")
+    private int yearsOfService;
+
+    public int getYearsOfService() {
+        return yearsOfService;
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
+    public void setYearsOfService(int yearsOfService) {
+        this.yearsOfService = yearsOfService;
     }
 }

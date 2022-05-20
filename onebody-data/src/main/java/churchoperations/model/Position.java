@@ -1,13 +1,21 @@
 package churchoperations.model;
 
-public class Position extends BaseEntity{
-    private String type;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-    public String getType() {
-        return type;
+@Entity
+@Table(name = "Positions")
+public class Position extends BaseEntity{
+
+    @Column(name = "title")
+    private String title;
+
+    public String getTitle() {
+        return title;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
