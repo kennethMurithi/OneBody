@@ -2,11 +2,13 @@ package churchoperations.service.map;
 
 import churchoperations.model.Position;
 import churchoperations.service.PositionService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class PositionServiceMap extends AbstractMapService<Position, Long> implements PositionService {
 
     @Override

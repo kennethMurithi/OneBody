@@ -6,10 +6,10 @@
   <body>
   
   
-    <h2>Owner Information</h2>
+    <h2>Member Information</h2>
   
   
-    <table class="table table-striped" th:object="${owner}">
+    <table class="table table-striped" th:object="${member}">
       <tr>
         <th>Name</th>
         <td><b th:text="*{firstName + ' ' + lastName}"></b></td>
@@ -28,23 +28,23 @@
       </tr>
     </table>
   
-    <a th:href="@{{id}/edit(id=${owner.id})}" class="btn btn-default">Edit
-      Owner</a>
-    <a th:href="@{{id}/pets/new(id=${owner.id})}" class="btn btn-default">Add
-      New Pet</a>
+    <a th:href="@{{id}/edit(id=${member.id})}" class="btn btn-default">Edit
+      Member</a>
+    <a th:href="@{{id}/departments/new(id=${member.id})}" class="btn btn-default">Add
+      New Next Of Department</a>
   
     <br />
     <br />
     <br />
-    <h2>Pets and Visits</h2>
+    <h2>Departments and Missions</h2>
   
     <table class="table table-striped">
   
-      <tr th:each="pet : ${owner.pets}">
+      <tr th:each="pet : ${member.departments}">
         <td valign="top">
           <dl class="dl-horizontal">
             <dt>Name</dt>
-            <dd th:text="${pet.title}" /></dd>
+            <dd th:text="${department.}" /></dd>
             <dt>Birth Date</dt>
             <dd
               th:text="${#temporals.format(pet.birthDate, 'yyyy-MM-dd')}" /></dd>

@@ -12,13 +12,13 @@ import java.util.Set;
 public class Councilors extends Member {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "councilor")
-    private Set<CouncilorVisits> requestedvisits = new HashSet<>();
+    private Set<counselling> requestedvisits = new HashSet<>();
 
-    public Set<CouncilorVisits> getRequestedvisits() {
+    public Set<counselling> getRequestedvisits() {
         return requestedvisits;
     }
 
-    public void setRequestedvisits(Set<CouncilorVisits> requestedvisits) {
+    public void setRequestedvisits(Set<counselling> requestedvisits) {
         this.requestedvisits = requestedvisits;
     }
 }

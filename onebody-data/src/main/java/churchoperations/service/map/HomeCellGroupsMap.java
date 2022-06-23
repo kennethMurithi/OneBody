@@ -2,11 +2,13 @@ package churchoperations.service.map;
 
 import churchoperations.model.HomeCellGroups;
 import churchoperations.service.HomeCellService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class HomeCellGroupsMap extends AbstractMapService<HomeCellGroups, Long> implements HomeCellService {
 
     @Override

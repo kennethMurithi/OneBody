@@ -2,11 +2,13 @@ package churchoperations.service.map;
 
 import churchoperations.model.Councilors;
 import churchoperations.service.CounselorsService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class CounselorsServiceMap extends AbstractMapService<Councilors, Long> implements CounselorsService {
 
     @Override

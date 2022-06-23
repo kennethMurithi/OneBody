@@ -5,8 +5,8 @@ import java.time.LocalDate;
 
 
 @Entity
-@Table(name = "CouncilorVisits")
-public class CouncilorVisits extends BaseEntity{
+@Table(name = "counselling")
+public class counselling extends BaseEntity{
 
     @ManyToOne
     @JoinColumn(name = "councilor_id")

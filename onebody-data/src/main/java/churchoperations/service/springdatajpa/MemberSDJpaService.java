@@ -1,7 +1,7 @@
-package churchoperations.springdatajpa;
+package churchoperations.service.springdatajpa;
 
 import churchoperations.model.Member;
-import churchoperations.repositories.CouncilorVisitsRepository;
+import churchoperations.repositories.CounsellingRepository;
 import churchoperations.repositories.DepartmentsRepository;
 import churchoperations.repositories.MemberRepository;
 import churchoperations.repositories.PositionRepository;
@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -19,15 +21,15 @@ public class MemberSDJpaService implements MemberService {
     private final MemberRepository memberRepository;
     private final PositionRepository positionRepository;
     private final DepartmentsRepository departmentsRepository;
-    private final CouncilorVisitsRepository councilorVisitsRepository;
+    private final CounsellingRepository counsellingRepository;
 
     public MemberSDJpaService(MemberRepository memberRepository,
                               PositionRepository positionRepository, DepartmentsRepository departmentsRepository,
-                              CouncilorVisitsRepository councilorVisitsRepository) {
+                              CounsellingRepository counsellingRepository) {
         this.memberRepository = memberRepository;
         this.positionRepository = positionRepository;
         this.departmentsRepository = departmentsRepository;
-        this.councilorVisitsRepository = councilorVisitsRepository;
+        this.counsellingRepository = counsellingRepository;
     }
 
     @Override
@@ -43,8 +45,14 @@ public class MemberSDJpaService implements MemberService {
     }
 
     @Override
+    public List<Member> findAllByLastNameLike(String lastName) {
+        return null;
+    }
+
+    @Override
     public Member findById(Long aLong) {
-        return memberRepository.findById(aLong);
+        Optional<Member> optionalMember = Optional.ofNullable(memberRepository.findById(aLong));
+        return optionalMember.orElse(null);
     }
 
     @Override

@@ -37,7 +37,7 @@ public class Member extends BaseEntity {
     private Set<Departments> departments = new HashSet<>();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "member")
-    private Set<CouncilorVisits> councilorVisits = new HashSet<>();
+    private Set<counselling> councilorVisits = new HashSet<>();
 
     public String getFirstName() {
         return firstName;
@@ -102,4 +102,6 @@ public class Member extends BaseEntity {
     public void setDepartments(Set<churchoperations.model.Departments> departments) {
         this.departments = departments;
     }
+
+
 }
